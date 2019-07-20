@@ -93,7 +93,7 @@ li {
             <button type="submit" class="visually-hidden">Add An Item</button>
         </form>
          <form class="add-item-form2">
-            <label for="item-input">Go Ahead and Add another item</label>
+            <label for="item-input">Go Ahead and Add another item -it will disappear!</label>
             <input type="text" id="item-input2"
                 name="item-input2" title="Item" required autocomplete="off"
                 autofocus>
@@ -144,8 +144,9 @@ var ShoppingList = function() {
     this.form = $('.add-item-form2');
     this.form.submit(this.onAddItemSubmit.bind(this));
 
-    this.input = $('#item-input');
     this.input = $('#item-input2');
+    this.input = $('#item-input');
+    
 
     this.main = $('.main');
     this.main.on('dblclick', 'li',
